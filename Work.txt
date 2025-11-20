@@ -1,0 +1,45 @@
+Smart City Transportation Deep Learning Ensemble Approach for Traffic Accident Detection
+
+Traffic surveillance, accident detection, action recognition, smart city, autonomous
+transportation, deep learning.
+
+
+IEEE Transaction on Machine Learning,Volume:12,Issue Date:12.April.2024
+
+
+Smart_City_Transportation
+
+
+smart_city_transportation
+
+
+traffic_accident_detection
+
+
+
+Members
+--------
+
+
+Fid	
+Accident_Index	
+Longitude	
+Latitude	
+Police_Force	
+Accident_Severity	
+Number_of_Vehicles	
+Number_of_Casualties	
+ADate	
+Day_of_Week	
+ATime	
+first_Road_Class	
+first_Road_Number	
+Road_Type	
+Speed_limit	
+Junction_Control	
+second_Road_Class	
+second_Road_Number	
+Light_Conditions	
+Weather_Conditions	
+Road_Surface_Conditions
+Prediction

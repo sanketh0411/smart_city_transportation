@@ -1,0 +1,163 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style12 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">View Traffic Accident Detection Details  !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                               <table width="739" border="5" align="center" bordercolor="#FF00FF">
+                               <tr>
+                                   <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Fid</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Accident_Index</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Longitude</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Latitude</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Police_Force</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Accident_Severity</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Number_of_Vehicles</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Number_of_Casualties</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">ADate</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Day_of_Week</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">ATime</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">first_Road_Class</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">first_Road_Number</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Road_Type</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Speed_limit</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Junction_Control</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">second_Road_Class</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">second_Road_Number</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Light_Conditions</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Weather_Conditions</span></div>
+                                   </div></td>
+ <td width="366" bgcolor="#FF0000"><div align="center" class="style12">
+                                     <div align="center"><span class="style8 style6">Road_Surface_Conditions</span></div>
+                                   </div></td>
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+                     <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Fid}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Accident_Index}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Longitude}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Latitude}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Police_Force}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Accident_Severity}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Number_of_Vehicles}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Number_of_Casualties}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.ADate}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Day_of_Week}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.ATime}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.first_Road_Class}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.first_Road_Number}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Road_Type}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Speed_limit}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Junction_Control}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.second_Road_Class}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.second_Road_Number}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Light_Conditions}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Weather_Conditions}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Road_Surface_Conditions}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Prediction}}</div></td>
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

@@ -1,0 +1,214 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF TRAFFIC ACCIDENT DETECTION TYPE !!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1122" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center" class="style4">FEED DATASET DETAILS HERE </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="287" height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Fid</div></td>
+                                    <td width="272"><div align="center">
+                                        <input type="text" name="Fid">
+                                    </div></td>
+                                    <td width="270" bgcolor="#FF0000"><div align="center" class="style4">Enter Accident_Index</div></td>
+                                    <td width="273"><div align="center">
+                                        <input type="text" name="Accident_Index">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Longitude</div></td>
+                                    <td><div align="center">
+                                        <input type="text" name="Longitude">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter Latitude</div></td>
+                                    <td><div align="center">
+                                        <input type="text" name="Latitude">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Police_Force</div></td>
+                                    <td><div align="center">
+                                        <input type="text" name="Police_Force">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter Accident_Severity</div></td>
+                                    <td><div align="center">
+                                        <input type="text" name="Accident_Severity">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Number_of_Vehicles</div></td>
+                                    <td><div align="center">
+                                        <input type="text" name="Number_of_Vehicles">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter Number_of_Casualties</div></td>
+                                    <td><div align="center">
+                                        <input type="text" name="Number_of_Casualties">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter ADate</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="ADate">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter Day_of_Week</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Day_of_Week">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter ATime</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="ATime">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter first_Road_Class</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="first_Road_Class">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter first_Road_Number</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="first_Road_Number">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter Road_Type</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Road_Type">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Speed_limit</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Speed_limit">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter Junction_Control</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Junction_Control">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter second_Road_Class</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="second_Road_Class">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter second_Road_Number</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="second_Road_Number">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Light_Conditions</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Light_Conditions">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter Weather_Conditions</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Weather_Conditions">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Road_Surface_Conditions</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Road_Surface_Conditions">
+                                    </div></td>
+                                    <td bgcolor="#FFFFFF">&nbsp;</td>
+                                    <td bgcolor="#FFFFFF">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000">&nbsp;</td>
+                                  </tr>
+  <td><p>
+    <input name="submit" type="submit" class="style1" value="Predict">
+        </p>          </td>
+  </tr>
+                                </table>
+						</fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table width="1025" height="52" border="0" align="center" >
+                                    <tr><td width="686" bgcolor="#FF0000"><div align="center"><span class="style6">PREDICTION OF TRAFFIC ACCIDENT DETECTION TYPE</span> :: </div></td>
+
+
+
+                                      <td width="303" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center"><strong>{{objs}}</strong></div></td>
+                                    </tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
